@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sweet Bites | Homemade Desserts</title>
+<style>
+:root{--pink:#e74768;--rose:#fff0f2;--brown:#512719;--cream:#fffaf5;--muted:#745f59}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;color:#35221e;background:var(--cream)}
+header{background:#fff8f6;border-bottom:1px solid #f0d8d4;position:sticky;top:0;z-index:5}
+.nav{max-width:1120px;margin:auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-family:Georgia,serif;font-size:25px;font-weight:bold;color:var(--brown)}.brand small{display:block;font:12px system-ui;color:var(--muted);letter-spacing:1px}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:var(--brown);text-decoration:none;font-size:14px}
+.cartpill{border:0;background:var(--pink);color:white;padding:9px 13px;border-radius:24px;font-weight:700}
+.hero{background:linear-gradient(90deg,rgba(255,242,235,.97),rgba(255,242,235,.75)),url('dessert-hero.png') center/cover;min-height:390px;display:flex;align-items:center}
+.hero-inner{max-width:1120px;width:100%;margin:auto;padding:52px 22px}.eyebrow{text-transform:uppercase;letter-spacing:3px;color:#7c3d31;font-size:12px}
+h1{font:clamp(40px,7vw,68px) Georgia,serif;color:var(--brown);margin:12px 0}.hero p{max-width:490px;line-height:1.8}
+.btn{display:inline-block;border:0;border-radius:30px;background:var(--pink);color:#fff;padding:13px 22px;font-weight:700;text-decoration:none;cursor:pointer}
+section{max-width:1120px;margin:auto;padding:38px 18px}h2{text-align:center;font:32px Georgia,serif;color:var(--brown);margin:0 0 8px}.sub{text-align:center;color:var(--muted);margin:0 0 25px}
+.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid #eedbd5;border-radius:13px;overflow:hidden;text-align:center;padding-bottom:15px}.foodpic{height:145px;display:grid;place-items:center;font-size:68px;background:linear-gradient(135deg,#f9d9cd,#fff0df)}.card h3{margin:12px 6px 4px;font: bold 19px Georgia,serif}.price{font-weight:800;margin:8px}.card button{margin-top:5px}
+.how{background:var(--rose);max-width:none}.how-inner{max-width:1120px;margin:auto;padding:35px 18px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:#fffaf9;padding:18px;border-radius:12px;text-align:center}.step strong{display:block;color:var(--brown);margin:8px}
+.orderbox{background:white;border:1px solid #edd8d1;border-radius:15px;padding:22px;max-width:760px;margin:20px auto}.row{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid #f0e2dd;padding:9px 0}.muted{color:var(--muted);font-size:14px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}label{font-size:14px;font-weight:650}input,select,textarea{width:100%;padding:11px;border:1px solid #ddc9c2;border-radius:8px;font:inherit;margin-top:5px;background:white}textarea{min-height:80px}.wide{grid-column:1/-1}.note{background:#fff1f3;border-radius:10px;padding:12px;font-size:14px;line-height:1.7;margin:12px 0}
+footer{background:#3b211c;color:#fff3ed;padding:28px 18px;text-align:center}footer p{margin:6px}
+@media(max-width:720px){nav{gap:10px}nav a{font-size:12px}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.foodpic{height:120px}.steps{grid-template-columns:1fr}.hero{min-height:340px}.formgrid{grid-template-columns:1fr}.wide{grid-column:auto}.brand{font-size:20px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="brand">♡ Sweet Bites <small>HOMEMADE DESSERTS</small></div><nav><a href="#home">হোম</a><a href="#menu">মেনু</a><a href="#order">অর্ডার</a><a href="#contact">যোগাযোগ</a></nav><button class="cartpill" onclick="document.querySelector('#order').scrollIntoView()">কার্ট: <span id="cartCount">0</span></button></div></header>
+<main>
+<div class="hero" id="home"><div class="hero-inner"><div class="eyebrow">Fresh • Homemade • Delicious</div><h1>Sweet Bites ♡</h1><h2 style="text-align:left;font-family:system-ui;font-size:clamp(22px,4vw,30px)">তোমার পছন্দের ডেজার্ট,<br>এখন তোমার দরজায়!</h2><p>কেক, ব্রাউনি, পুডিং ও কাপকেকসহ মজার সব ডেজার্ট। অর্ডার করো সহজে, মিষ্টি মুহূর্ত উপভোগ করো ভালোবাসা দিয়ে।</p><a class="btn" href="#menu">মেনু দেখো ↓</a></div></div>
+<section id="menu"><h2>Our Featured Desserts</h2><p class="sub">আমাদের ডেজার্ট মেনু থেকে পছন্দ করে অর্ডার করুন</p>
+<div class="products">
+<div class="card"><div class="foodpic">🍫</div><h3>Chocolate Brownie</h3><p class="muted">চকলেটি ও নরম</p><div class="price">৳ 220</div><button class="btn" onclick="add('Chocolate Brownie',220)">অর্ডার করুন +</button></div>
+<div class="card"><div class="foodpic">🍮</div><h3>Chocolate Pudding</h3><p class="muted">ক্রিমি চকলেট পুডিং</p><div class="price">৳ 150</div><button class="btn" onclick="add('Chocolate Pudding',150)">অর্ডার করুন +</button></div>
+<div class="card"><div class="foodpic">🧁</div><h3>Cupcake</h3><p class="muted">নরম ও মিষ্টি</p><div class="price">৳ 120</div><button class="btn" onclick="add('Cupcake',120)">অর্ডার করুন +</button></div>
+<div class="card"><div class="foodpic">🍨</div><h3>Dessert Cup</h3><p class="muted">লেয়ারড ডেজার্ট</p><div class="price">৳ 200</div><button class="btn" onclick="add('Dessert Cup',200)">অর্ডার করুন +</button></div>
+</div><p class="muted" style="text-align:center;margin-top:16px">নমুনা পণ্য ও দাম—প্রকাশের আগে নিজের আসল পণ্য, দাম ও ছবি বসিয়ে নেবেন।</p>
+</section>
+<div class="how"><div class="how-inner"><h2>How to Order?</h2><p class="sub">অর্ডার করা খুবই সহজ</p><div class="steps"><div class="step"><div style="font-size:32px">📝</div><strong>১. পণ্য বেছে নিন</strong><span class="muted">মেনু থেকে ডেজার্ট ও পরিমাণ ঠিক করুন।</span></div><div class="step"><div style="font-size:32px">💳</div><strong>২. পুরো টাকা পরিশোধ করুন</strong><span class="muted">bKash-এ সম্পূর্ণ টাকা পাঠিয়ে Transaction ID দিন।</span></div><div class="step"><div style="font-size:32px">🛵</div><strong>৩. ডেলিভারি নিন</strong><span class="muted">বাকি টাকা খাবার পাওয়ার সময় পরিশোধ করুন।</span></div></div></div></div>
+<section id="order"><h2>Place Your Order</h2><p class="sub">আপনার অর্ডারের তথ্য দিন</p><div class="orderbox"><div id="cartItems"><p class="muted">আপনি এখনো কোনো পণ্য বাছেননি। মেনু থেকে “অর্ডার করুন” চাপুন।</p></div><div class="row"><strong>পণ্যের মোট দাম</strong><strong id="subtotal">৳0</strong></div>
+<form id="orderForm" onsubmit="submitOrder(event)"><div class="formgrid">
+<div><label>আপনার নাম<input id="customer" required placeholder="নাম লিখুন"></label></div>
+<div><label>মোবাইল নম্বর<input id="phone" type="tel" required placeholder="01XXXXXXXXX"></label></div>
+<div class="wide"><label>ডেলিভারির ঠিকানা<textarea id="address" required placeholder="বাসা, রোড, এলাকা"></textarea></label></div>
+<div><label>ডেলিভারি চার্জ (৳)<input id="delivery" type="number" min="0" value="60" oninput="renderCart()"></label></div>
+<div class="wide"><label>পেমেন্টের Transaction ID<input id="trxid" placeholder="টাকা পাঠানোর পর TrxID লিখুন"></label></div>
+<div class="wide"><label>পেমেন্টের পদ্ধতি<input value="bKash — Full Payment" readonly></label></div>
+<div class="wide"><label>বিশেষ নির্দেশনা<textarea id="notes" placeholder="যেমন: ডেলিভারির পছন্দের সময়"></textarea></label></div>
+</div><div class="note"><strong>💗 bKash Full Payment</strong><p>অর্ডারের মোট টাকা bKash-এ Send Money করে পাঠান:</p><p style="font-size:22px;font-weight:800;letter-spacing:1px">01304420608 <button class="btn" type="button" onclick="navigator.clipboard.writeText('01304420608').then(()=>alert('bKash নম্বর কপি হয়েছে'))">নম্বর কপি করুন</button></p><p>পেমেন্টের পর Transaction ID উপরের ঘরে লিখুন। অর্ডার নিশ্চিত করার আগে বিক্রেতা পেমেন্ট যাচাই করবেন। এটি ম্যানুয়াল পেমেন্ট; ওয়েবসাইট সরাসরি টাকা কাটে না। কাস্টমারের PIN/OTP কখনো চাইবেন না।</p></div><button class="btn" type="submit" style="width:100%">অর্ডার বিবরণ তৈরি করুন</button></form><div id="result" class="note" hidden></div></div></section>
+<section id="contact"><h2>Contact Us</h2><p class="sub">প্রশ্ন থাকলে আমাদের সঙ্গে যোগাযোগ করুন</p><div class="orderbox" style="text-align:center"><p>📞 ফোন: নিজের নম্বর এখানে বসান</p><p>📍 ডেলিভারি এলাকা: নিজের এলাকা লিখুন</p><p>📱 WhatsApp: নিজের WhatsApp নম্বর যোগ করুন</p></div></section>
+</main>
+<footer><div class="brand" style="color:#fff3ed">♡ Sweet Bites</div><p>Homemade Desserts • Made with love</p><p>© Sweet Bites — আপনার মিষ্টি মুহূর্তের সঙ্গী</p><p style="font-size:12px;color:#dfc8c0">প্রকাশের আগে ব্র্যান্ডের নাম, যোগাযোগ, পণ্য, দাম ও পেমেন্ট নির্দেশনা আপডেট করুন।</p></footer>
+<script>
+const cart={};
+function add(name,price){cart[name]=(cart[name]||{price,qty:0});cart[name].qty++;renderCart();document.querySelector('#order').scrollIntoView({behavior:'smooth'});}
+function changeQty(name,delta){cart[name].qty+=delta;if(cart[name].qty<=0)delete cart[name];renderCart();}
+function renderCart(){let html='',sum=0,count=0;for(const [name,item] of Object.entries(cart)){sum+=item.price*item.qty;count+=item.qty;html+=`<div class="row"><span>${name} × ${item.qty}</span><span>৳${item.price*item.qty} <button type="button" onclick="changeQty('${name}',-1)">−</button> <button type="button" onclick="changeQty('${name}',1)">+</button></span></div>`;}document.querySelector('#cartItems').innerHTML=html||'<p class="muted">আপনি এখনো কোনো পণ্য বাছেননি। মেনু থেকে “অর্ডার করুন” চাপুন।</p>';document.querySelector('#subtotal').textContent='৳'+sum;document.querySelector('#cartCount').textContent=count;}
+function submitOrder(e){e.preventDefault();if(!Object.keys(cart).length){alert('আগে মেনু থেকে অন্তত একটি পণ্য বেছে নিন।');return;}let items=Object.entries(cart).map(([n,i])=>`${n} x ${i.qty} = ৳${i.price*i.qty}`).join('\\n');let subtotal=Object.values(cart).reduce((s,i)=>s+i.price*i.qty,0);let delivery=Math.max(0,Number(document.querySelector('#delivery').value)||0);let total=subtotal+delivery;let trxid=document.querySelector('#trxid').value.trim();let message=`Sweet Bites Order\nনাম: ${document.querySelector('#customer').value}\nফোন: ${document.querySelector('#phone').value}\nঠিকানা: ${document.querySelector('#address').value}\nপণ্য:\n${items}\nপণ্যের মোট: ৳${subtotal}\nডেলিভারি: ৳${delivery}\nমোট পরিশোধযোগ্য: ৳${total}\nপেমেন্ট পদ্ধতি: bKash Full Payment\nbKash নম্বর: 01304420608\nTransaction ID: ${trxid || 'এখনো দেওয়া হয়নি'}\nবিশেষ নির্দেশনা: ${document.querySelector('#notes').value}`;let box=document.querySelector('#result');box.hidden=false;box.innerHTML='<strong>অর্ডারের বিবরণ তৈরি হয়েছে!</strong><p>নিচের বিবরণ কপি করে বিক্রেতাকে পাঠান। এটি এখনো স্বয়ংক্রিয়ভাবে কোনো সার্ভারে জমা বা পেমেন্ট করে না।</p><button class="btn" type="button" onclick="copyOrder()">অর্ডার কপি করুন</button><pre id="orderText" style="white-space:pre-wrap;font:14px system-ui;margin-top:12px"></pre>';document.querySelector('#orderText').textContent=message;window.currentOrder=message;box.scrollIntoView({behavior:'smooth'});}
+function copyOrder(){if(navigator.clipboard){navigator.clipboard.writeText(window.currentOrder).then(()=>alert('অর্ডার কপি হয়েছে।'));}else{alert('অর্ডারের লেখা নির্বাচন করে কপি করুন।');}}
+</script>
+</body>
+</html>
